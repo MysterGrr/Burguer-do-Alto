@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Import Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    <!--FIM Import Toastify-->
+
+    <!--Font Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <!--FIM Font Poppins-->
+
+    <!--Import biblioteca de icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--FIM Import biblioteca de icons-->
+
+    <!--Meta TAG Open Graph-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Burguer do alto - A melhor hamburgueria do alto!"/>
+    <meta property="og:image" content="https://projeto-hamburgueria-sage.vercel.app/assets/Logo.png"/>
+    <meta property="og:descripition" content="O melhor hambúrguer da sua região!"/>
+    <meta property="og:site_name" content="Burguer do Alto"/>
+    <!--FIM Meta TAG Open Graph-->
+
+    <link rel="stylesheet" href="./styles/output.css">
+
+
+    <!---->
+            <!--Faculdade Estácio de Sá-->
+        <!--Professor: Lazaro de Oliveira-->
+
+    <!--Trabalho feito por: Victor Bastos Cunha -->
+    <!--Matricula: 202308259555 -->
+    <!--Link do site executando: https://projeto-hamburgueria-sage.vercel.app -->
+    
+    <!---->
+    
+    <title>Burguer do Alto - A melhor hamburgueria do alto!</title>
+</head>
+<body>
+    
+    <!--Header-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        
+
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img 
+                src="assets/Logo.png" 
+                alt="Logo Buguer do Alto" 
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            />
+
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                Burguer do Alto
+            </h1>
+
+            <span class="text-white font-medium"> Estrada das furnas 3001</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+               <span class="text-white font-medium">Terça á Domingo - 18:00 as 00:00</span> 
+            </div>
+        </div>
+    </header>
+    <!-- Fim Header-->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+
+    <!--Inicio Menu-->
+    <div id="menu">
+        
+        <main class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img 
+                src="./assets/X-Boladão.png" alt="X-Boladão"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-Boladão</p>
+                <p class="text-sm">2 carnes, 2 ovos, bacon, calabresa, queijo, salada, batata palha, ketchup, maionese da casa e molho Billy Jack</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$15,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-Boladão"
+                        data-price="15.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/X-BBQ.png" alt="X-BBQ"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-BBQ</p>
+                <p class="text-sm">Carne, queijo, onion, barbecue e molho Billy Jack</p>
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$9,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-BBQ"
+                        data-price="9.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+    
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/X-Bacon.png" alt="X-Bacon"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-Bacon</p>
+                <p class="text-sm">
+                    Carne, queijo, bacon, cebola ao Shoyu, salada, maionese verde e ketchup
+                </p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$10,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-Bacon"
+                        data-price="10.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/X-Empanado de Frango.png" alt="X-Empanado de Frango"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-Empanado de Frango</p>
+                <p class="text-sm">
+                    Empanado de frango, queijo, salada, molho Billy Jack e batata palha
+                </p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">
+                        R$11,00
+                    </p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-Empanado de Frango"
+                        data-price="11.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+            
+        <!--Produto item-->
+        <div class="flex gap-2 w-full">
+            <img src="./assets/Hambúrguer.png" alt="Hambúrguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">Hambúrguer</p>
+                <p class="text-sm">Carne, queijo, salada e ketchup</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                    <p class="font-bold text-lg">R$7,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Hambúrguer"
+                        data-price="7.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/X-Triplo.png" alt="X-Triplo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-Triplo</p>
+                <p class="text-sm">3 carnes, 3 queijo e cheddar cremoso</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$15,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-Triplo"
+                        data-price="15.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/X-Duplo.png" alt="X-Duplo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">X-Duplo</p>
+                <p class="text-sm">2 carnes, 2 queijo, bacon, cebola crispy e maionese</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$14,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="X-Duplo"
+                        data-price="14.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Produto item-->
+        <div class="flex gap-2">
+            <img src="./assets/Cachorro-quente.jpg" alt="Cachorro-quente"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div>
+                <p class="font-bold">Cachorro-quente</p>
+                <p class="text-sm">Salsicha (ou linguiça), molho, milho, ervilha, batata palha, queijo ralado, ovo de codorna, ketchup e molho Billy Jack</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$9,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Cachorro-quente"
+                        data-price="9.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+        
+        </main>
+        
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>
+
+        <!--GRID BEBIDAS-->
+        <div class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--Bebida item-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-2.png" alt="Guaraná lata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná lata</p>
+                    <p class="text-sm">300ml</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$5,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná lata"
+                            data-price="5.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Bebida item-->
+
+            <!--Bebida item-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="Coca-cola lata"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-Cola lata</p>
+                    <p class="text-sm">300ml</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$5,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca-Cola lata"
+                            data-price="5.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Bebida item-->
+
+            <!--Bebida item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Refresco-Guaravita-Tradicional-290ml.png" alt="Guaravita"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Guaravita</p>
+                    <p class="text-sm">290ml</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$2,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaravita"
+                            data-price="2.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Bebida item-->
+
+            <!--Bebida item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Coca cola garrafa.png" alt="Coca-cola 2l"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-cola</p>
+                    <p class="text-sm">2L</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$12,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca-cola"
+                            data-price="12.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Bebida item-->
+
+            <!--Bebida item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Guaraviton.png" alt="Guaraviton"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraviton</p>
+                    <p class="text-sm">500ml</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$4,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraviton"
+                            data-price="4.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Bebida item-->
+
+        
+
+        </div>
+        <!--FIM GRID BEBIDAS-->
+
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Combos
+            </h2>
+        </div>
+
+        
+        <!--GRID COMBOS-->
+        <div class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo x-boladão.jpeg" alt="Combo X-Boladão"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo X-Boladão</p>
+                    <p class="text-sm">1 X-Boladão (2 carnes, 2 ovos, bacon, calabresa, queijo, salada, batata palha, ketchup, maionese da casa e molho Billy Jack) mais 1 Guaravita e 1 batata pequena.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$20,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo X-Boladão"
+                            data-price="20.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo X-BBQ.jpeg" alt="Combo X-BBQ"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo X-BBQ</p>
+                    <p class="text-sm">1 X-BBQ (Carne, queijo, onion, barbecue e molho Billy Jack) mais 1 Guaravita e 1 batata pequena.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$14,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo X-BBQ"
+                            data-price="14.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo x-bacon.jpeg" alt="Combo X-Bacon"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo X-Bacon</p>
+                    <p class="text-sm">1 X-Bacon (Carne, queijo, bacon, cebola ao Shoyu, salada, maionese verde e ketchup) mais 1 Guaravita e 1 batata pequena.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$15,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo X-Bacon"
+                            data-price="15.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo X-Empanado de frango.jpeg" alt="Combo X-Empanado de frango"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo X-Empanado de frango</p>
+                    <p class="text-sm">1 X-Empanado de frango (Empanado de frango, queijo, salada, molho Billy Jack e batata palha) mais 1 Guaravita e 1 batata pequena</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$16,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo X-Empanado de frango"
+                            data-price="16.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo X-Burguer.jpeg" alt="Combo X-Hamburguer"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo X-Hamburguer</p>
+                    <p class="text-sm">1 Hambúguer (Carne, queijo, salada e ketchup) mais um Guaravita e 1 batata pequena</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$12,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo X-Hamburguer"
+                            data-price="12.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+        <div class="flex gap-2">
+            <img src="./assets/Combo X-Triplo.jpeg" alt="Combo X-Triplo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">Combo X-Triplo</p>
+                <p class="text-sm">1 X-Triplo(3 carnes, 3 queijo e cheddar cremoso) mais 1 Guaravita e 1 batata pequena</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$20,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Combo X-Triplo"
+                        data-price="20.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Combo item-->
+
+        <!--Combo item-->
+        <div class="flex gap-2">
+            <img src="./assets/Combo X-Duplo.jpeg" alt="Combo X-Duplo"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">Combo X-Duplo</p>
+                <p class="text-sm">1 X-Duplo(2 carnes, 2 queijo, bacon, cebola crispy e maionese) mais um Guaravita e 1 batata pequena</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$19,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Combo X-Duplo"
+                        data-price="19.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Produto item-->
+
+        <!--Combo item-->
+        <div class="flex gap-2">
+            <img src="./assets/Combo Cachorro-quente.jpeg" alt="Combo Cachorro-quente"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            >
+
+            <div>
+                <p class="font-bold">Combo Cachorro-quente</p>
+                <p class="text-sm">1 Cachorro-quente (com salsicha ou linguiça, molho, milho, ervilha, batata palha, queijo ralado, ovo de codorna, ketchup e molho Billy Jack) mais 1 Guaravita e 1 batata pequena</p>
+            
+
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$14,00</p>
+                    <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Combo Cachorro-quente"
+                        data-price="14.00"
+                        >
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--FIM Combo item-->
+
+        </div>
+        <!--FIM GRID Combo-->
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Combos na caixa
+            </h2>
+        </div>
+
+        
+        <!--GRID COMBOS-->
+        <div class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo Simples.jpeg" alt="Combo Simples"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo Simples</p>
+                    <p class="text-sm">2 X-Hambúrguer (Carne, queijo, salada e ketchup), Batata G simples, 5 salgadinhos, 5 nuggets 1 guaraviton e 5 mini churros.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$40,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Simples"
+                            data-price="40.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo Casal.jpeg" alt="Combo Casal"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo Casal</p>
+                    <p class="text-sm">2 X-Bacon (Carne, queijo, bacon, cebola ao Shoyu, salada, maionese verde e ketchup), Batata G com cheddar e bacon, 10 salgadinhos, 5 nuggets, refrigerante de 2 litros e 10 mini churros.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$65,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Casal"
+                            data-price="65.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+            <!--Combo item-->
+            <div class="flex gap-2 w-full">
+                <img src="assets/Combo Familia.jpeg" alt="Combo Familia"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold">Combo Familia</p>
+                    <p class="text-sm">4 X-Tudo (Carne, queijo, ovo, bacon, cebola ao Shoyu, salada, maionese verde e ketchup), batata G com cheddar e bacon, 20 salgadinhos, 10 nuggets, refrigerante de 2 litros, 10 mini churros.</p>
+            
+
+                    <div class="flex items-center gap-2 justify-between mt-3 w-full">
+                        <p class="font-bold text-lg">R$100,00</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Familia"
+                            data-price="100.00"
+                            >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM Combo item-->
+
+    </div>
+    <!--Fim Menu-->
+    
+
+    
+
+    <!--Modal cart-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">
+                Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            
+            <p class="font-bold mt-4">Como gostaria de receber seu produto?</p>
+
+            <label for="home-pickup">
+                <input type="radio" id="home-pickup" name="pickup-option">
+                Receber em casa
+              </label>
+              <br>
+            <input type="text" placeholder="Digite seu endereço completo" id="address" class="w-full border-2 p-1 rounded my-1 hidden">
+
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <label for="local-pickup">
+                <input type="radio" id="local-pickup" name="pickup-option">
+                Buscar no local
+              </label>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" 
+                    class="bg-green-500 text-white px-4 py-1 rounded">
+                    Finalizar pedido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--FIM Modal cart-->
+
+    <!--Button cart footer-->
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!--FIM Button cart footer-->
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
