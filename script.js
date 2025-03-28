@@ -248,7 +248,7 @@ function checkRestaurantOpen() {
 }
 
 const spanItem = document.getElementById("date-span")
-const isOpen = true;
+const isOpen = checkRestaurantOpen();
 
 // Manipula o card 
 if (isOpen) {
