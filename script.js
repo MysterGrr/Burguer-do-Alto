@@ -239,18 +239,19 @@ checkoutBtn.addEventListener("click", function () {
 })
 
 
-checkRestaurantOpen = true;
+
 
 // Verifica a hora
-//function checkRestaurantOpen() {
+function checkRestaurantOpen() {
     //const data = new Date();
     //const hora = data.getHours();
 
+    return true;
     //return hora >= 18 && hora <= 23; //true = restaurante está aberto
-//}
+}
 
 const spanItem = document.getElementById("date-span")
-const isOpen = checkRestaurantOpen;
+const isOpen = checkRestaurantOpen();
 
 // Manipula o card 
 if (isOpen) {
